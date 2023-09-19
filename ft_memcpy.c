@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 19:37:35 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/16 20:23:17 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:21:54 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+#include <stdlib.h>
+
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
     while 
-    return ((void *) &dest)
+    return ((void *) &dest);
 }

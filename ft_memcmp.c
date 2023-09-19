@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 20:48:51 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/19 18:01:09 by ssandova         ###   ########.fr       */
+/*   Created: 2023/09/19 19:59:09 by ssandova          #+#    #+#             */
+/*   Updated: 2023/09/19 20:02:43 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	size_t	j;
+    size_t  i;
 
-	i = 0;
-	j = 0;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	
-	while (haystack[i] && i < len)
-	{
-		if (haystack[i] == needle[0])
-		{
-			while (haystack[i+j] == needle[j])
-			{
-				if (needle[j + 1] == '\0')
-					return ((char *)&haystack[i]);
-				j++;
-			}
-		}
-		i++;
-	}
-	return (0);
+    i = 0;
+    while (i < n)
+    {
+        if ()
+    }
 }

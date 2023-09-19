@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:22:59 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/16 17:09:48 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:19:01 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((c[0] >= 65 && c[1] <= 90) || (c[0] >= 97 && c[0] <= 122))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
 	else
 		return (0);

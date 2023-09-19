@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:13:50 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/16 17:22:40 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:19:27 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c[0] >= 48 && c[0] <= 57)
+	if (c >= 48 && c <= 57)
 		return (1);
 	else
 		return (0);
