@@ -6,9 +6,11 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:13:50 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/19 18:19:27 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/09/23 18:17:46 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

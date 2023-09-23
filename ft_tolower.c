@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 18:11:06 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/16 20:05:36 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/09/23 18:17:33 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		c = c + 32;
+	return (c);
 }
