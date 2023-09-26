@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:30:37 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/23 20:13:06 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/09/26 18:48:07 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strrchr(const char *s, int c);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
