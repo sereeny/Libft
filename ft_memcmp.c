@@ -5,18 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 19:59:09 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/19 20:02:43 by ssandova         ###   ########.fr       */
+/*   Created: 2023/09/23 15:01:53 by ssandova          #+#    #+#             */
+/*   Updated: 2023/09/28 18:53:53 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-    size_t  i;
+#include "libft.h"
 
-    i = 0;
-    while (i < n)
-    {
-        if ()
-    }
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	unsigned char	*st1;
+	unsigned char	*st2;
+
+	st1 = (unsigned char *)s1;
+	st2 = (unsigned char *)s2;
+	while (n > 0)
+	{
+		if (*st1 == *st2)
+		{
+			n--;
+			st1++;
+			st2++;
+		}
+		else
+		{
+			return ((int)*st1 - (int)*st2);
+		}
+	}
+	return ('\0');
 }

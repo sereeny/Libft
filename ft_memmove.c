@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 19:25:51 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/26 20:39:25 by ssandova         ###   ########.fr       */
+/*   Created: 2023/09/28 16:46:49 by ssandova          #+#    #+#             */
+/*   Updated: 2023/09/28 17:19:21 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-
-	while ((d < s) && (len > 0))
+	if ((d == NULL) && (s == NULL))
+		return (NULL);
+	if (d > s)
 	{
-		*d == *s;
-		len --;
-		d++;
-		s++;
+		while (len--)
+		d[len] = s[len];
 	}
+	else
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
