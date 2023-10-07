@@ -6,9 +6,13 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:24:50 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/23 18:17:52 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:06:46 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*The isalnum() function tests for any character for which isalpha(3) or 
+isdigit(3) is true.  The value of the argument must be representable as an 
+unsigned char or the value of EOF.*/
 
 #include "libft.h"
 

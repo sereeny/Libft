@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/23 19:30:52 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/07 13:20:57 by ssandova         ###   ########.fr       */
+/*   Created: 2023/10/07 17:39:49 by ssandova          #+#    #+#             */
+/*   Updated: 2023/10/07 18:04:10 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The strrchr() function is identical to strchr(), except it locates the last 
-occurrence of c.*/
+/*A cada carácter de la string ’s’, aplica la función ’f’ dando como parámetros 
+el índice de cada carácter dentro de ’s’ y la dirección del propio carácter, 
+que podrá modificarse si es necesario.*/
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
-	i = ft_strlen(s);
-	while (i != 0)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		f((unsigned int)i, &s[i]);
+		i++;
 	}
-	if (s[i] == (char)c)
-		return ((char *)(s + i));
-	return (NULL);
+	s[i] = '\0';
 }

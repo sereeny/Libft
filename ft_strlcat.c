@@ -6,9 +6,16 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 12:11:40 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/30 19:16:18 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:16:35 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*s trlcat() appends string src to the end of dst.  It will append at most
+dstsize - strlen(dst) - 1 characters.  It will then NUL-terminate, unless 
+dstsize is 0 or the original dst string was longer than dstsize (in practice 
+this should not happen as it means that either dstsize is incorrect or that dst
+is not a proper string).
+If the src and dst strings overlap, the behavior is undefined.*/
 
 #include <stdio.h>
 #include <string.h>

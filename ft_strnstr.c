@@ -6,9 +6,13 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 20:48:51 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/23 18:01:25 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:20:17 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*The strnstr() function locates the first occurrence of the null-terminated 
+string needle in the string haystack, where not more than len characters are 
+searched. Characters that appear after a `\0' character are not searched.*/
 
 #include "libft.h"
 

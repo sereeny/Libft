@@ -6,9 +6,14 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:07:36 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/04 18:31:30 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:14:53 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*strjoin() crea una cadena formada por str1 en combinación con str2. La cadena
+devuelta se asigna fuera de la memoria temporal y, por lo tanto, sólo es válida
+durante la duración de la cláusula. Si no hay suficiente espacio temporal 
+disponible, strjoin no se ejecuta y se genera un error.*/
 
 #include "libft.h"
 

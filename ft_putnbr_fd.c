@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/23 19:30:52 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/07 13:20:57 by ssandova         ###   ########.fr       */
+/*   Created: 2023/10/07 18:33:36 by ssandova          #+#    #+#             */
+/*   Updated: 2023/10/07 19:36:17 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The strrchr() function is identical to strchr(), except it locates the last 
-occurrence of c.*/
+/*Envía el número ’n’ al file descriptor dado.*/
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	long int	nbr;
 
-	i = ft_strlen(s);
-	while (i != 0)
+	nbr = (long int) n;
+	if (nbr < 0)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		ft_putchar_fd('-', fd);
+		nbr *= -1;
 	}
-	if (s[i] == (char)c)
-		return ((char *)(s + i));
-	return (NULL);
+	if (nbr > 9)
+	{
+		ft_putnbr_fd(nbr / 10, fd);
+		ft_putnbr_fd((nbr % 10), fd);
+	}
+	if (nbr < 10)
+		ft_putchar_fd(nbr + '0', fd);
 }

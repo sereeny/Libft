@@ -6,9 +6,12 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:45:19 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/23 18:17:44 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:07:58 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*The isascii() function tests for an ASCII character, which is any character 
+between 0 and octal 0177 inclusive.*/
 
 #include "libft.h"
 

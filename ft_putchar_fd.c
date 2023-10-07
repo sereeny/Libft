@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/23 19:30:52 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/07 13:20:57 by ssandova         ###   ########.fr       */
+/*   Created: 2023/10/07 18:06:12 by ssandova          #+#    #+#             */
+/*   Updated: 2023/10/07 18:09:55 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The strrchr() function is identical to strchr(), except it locates the last 
-occurrence of c.*/
+/*Envía el carácter ’c’ al file descriptor especificado.*/
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	int	i;
-
-	i = ft_strlen(s);
-	while (i != 0)
-	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
-	}
-	if (s[i] == (char)c)
-		return ((char *)(s + i));
-	return (NULL);
+	write(fd, &c, 1);
 }

@@ -6,9 +6,12 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:01:53 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/28 18:53:53 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:10:26 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*The memcmp() function compares byte string s1 against byte string s2. 
+Both strings are assumed to be n bytes long.*/
 
 #include "libft.h"
 

@@ -6,9 +6,13 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 18:03:39 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/23 18:17:36 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:24:16 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*he toupper() function converts a lower-case letter to the corresponding 
+upper-case letter. The argument must be representable as an unsigned char or 
+the value of EOF.*/
 
 #include "libft.h"
 

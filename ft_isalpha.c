@@ -6,9 +6,13 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:22:59 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/23 18:17:42 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:07:31 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*The isalpha() function tests for any character for which isupper(3) or 
+islower(3) is true.  The value of the argument must be representable as an 
+unsigned char or the value of EOF.*/
 
 #include "libft.h"
 

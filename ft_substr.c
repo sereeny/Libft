@@ -6,9 +6,12 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 20:07:41 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/04 16:48:20 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:22:50 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*Reserva (con malloc(3)) y devuelve una substring de la string ’s’. La 
+substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’.*/
 
 #include "libft.h"
 

@@ -6,9 +6,11 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:13:50 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/23 18:17:46 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:08:49 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*The isdigit() function tests for a decimal digit character.*/
 
 #include "libft.h"
 

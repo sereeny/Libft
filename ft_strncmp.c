@@ -6,9 +6,13 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:23:46 by ssandova          #+#    #+#             */
-/*   Updated: 2023/09/23 18:17:40 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:19:33 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*The strncmp() function compares not more than n characters.  Because strncmp()
+is designed for comparing strings rather than binary data, characters that 
+appear after a `\0' character are not compared.*/
 
 #include "libft.h"
 
