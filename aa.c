@@ -14,17 +14,15 @@ static int	count_digits(int n)
 {
 	int	count;
 
-	count = 0;
+	count = 1;
+	if (n < 0)
+		count++;
 	while (n != 0) 
 	{
 		n /= 10;
 		count++;
 	}
 	return (count);
-}
-static int	ft_buffer(int n)
-{
-	if n 
 }
 
 char	*ft_itoa(int n)
@@ -33,19 +31,19 @@ char	*ft_itoa(int n)
 	int		len;
 	int		i;
 
-	i = 0;
 	if (n == NULL)
 		return (NULL);
+	len = count_digits(n);		
 	if (n = 0)
-		buffer = malloc(1 + 1);
-		len = 1;
-	if (n > 0)
-		buffer = malloc(count_digits(n) + 1);
-		len = count_digits(n);
-	if (n < 0)
-		buffer = malloc(count_digits(n) + 2);
-		len = count_digits(n);
+	{
+		len = 2;
+		buffer = (char *)malloc(len);
+	}
+	i = len - 1;
+	buffer = (char *)malloc(len);
 	if (buffer == NULL)
 		return (NULL);
-	
+	if (n < 0)
+		buffer[i] = '-';
+	while (str[i])
 }
