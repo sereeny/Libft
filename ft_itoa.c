@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:00:06 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/09 20:28:08 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/11 20:02:42 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,46 @@ recibido como argumento. Los números negativos tienen que gestionarse.*/
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+static int	count_digits(int n)
 {
-	int 	i;
-	int 	j;
-	char	temp;
+	int	count;
 
-	i = 0;
-	j = ft_strlen(str) - 1;
-	while (i < j)
+	count = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		count++;
+	while (n != 0)
 	{
-		temp = str[i];
-		str[i] = str[j];
-		str[j] = temp;
-		i++;
-		j--;
+		n /= 10;
+		count++;
 	}
-	return (str);
+	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*nbr;
-	int		i;
+	char		*buffer;
+	int			len;
+	long int	nbr;
 
-	i = 0;
-	if (n == NULL)
+	nbr = (long int)n;
+	len = count_digits(nbr);
+	buffer = (char *)malloc(len + 1);
+	if (buffer == NULL)
 		return (NULL);
-	nbr = malloc(12);
+	buffer[len--] = '\0';
 	if (nbr == 0)
-		return (NULL);
-	while (n > 9)
+		buffer[0] = '0';
+	if (nbr < 0)
 	{
-		nbr[i] = n % 10;
-		n = n / 10;
+		buffer[0] = '-';
+		nbr *= -1;
 	}
-	if (n < 10)
-		nbr[i] = n + '0';
+	while (nbr > 0)
+	{
+		buffer[len--] = (nbr % 10) + 48;
+		nbr /= 10;
+	}
+	return ((char *)buffer);
 }
