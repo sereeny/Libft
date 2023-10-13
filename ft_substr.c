@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 20:07:41 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/07 13:22:50 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/13 13:51:20 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ substring empieza desde el índice ’start’ y tiene una longitud máxima ’l
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*pun;
+	char	*ptr;
 
 	if (s == NULL)
 		return (NULL);
@@ -25,9 +25,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > (ft_strlen(s) - start))
 		len = (ft_strlen(s) - start);
-	pun = (char *)malloc((sizeof(char) * len + 1));
-	if (pun == NULL)
+	ptr = (char *)malloc((sizeof(char) * len + 1));
+	if (ptr == NULL)
 		return (NULL);
-	ft_strlcpy(pun, s + start, len + 1);
-	return (pun);
+	ft_strlcpy(ptr, s + start, len + 1);
+	return (ptr);
 }
