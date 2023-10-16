@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:30:37 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/13 20:28:55 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/16 20:49:38 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 
 typedef struct s_list
 {
