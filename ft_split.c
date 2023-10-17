@@ -72,18 +72,18 @@ char	**ft_split(char const *s, char c)
 
 	array = malloc((ft_wordcount(s, c) + 1) * sizeof(char *));
 	i = 0;
+	st = -1;
 	j = 0;
-	st = 0;
 	if (s == NULL || array == NULL)
 		return (NULL);
 	while (i <= ft_strlen(s))
 	{
 		if (s[i] != c && st == 0)
 			st = i;
-		else if (s[i + 1] == c)
+		else if ( i == ft_strlen(s) || s[i] == c )
 		{
 			array[j++] = ft_strings(s, st, i);
-			st = 0;
+			st = -1;
 		}
 		i++;
 	}
