@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:50:24 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/16 20:53:29 by ssandova         ###   ########.fr       */
+/*   Updated: 2023/10/17 18:57:51 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ static char	*ft_strings(char const *s, int st, int fi)
 
 	i = 0;
 	string = (char *)malloc((fi - st + 1) * sizeof(char));
+	if (string == NULL)
+		return (NULL);
 	while (st < fi)
 	{
 		string[i] = s[st];
@@ -63,6 +65,13 @@ static char	*ft_strings(char const *s, int st, int fi)
 	return (string);
 }
 
+static void	ft_free(int j, char **array)
+{
+	while (--j >= 0)
+		free(array[j]);
+	free(array);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
@@ -71,21 +80,22 @@ char	**ft_split(char const *s, char c)
 	int		j;
 
 	array = malloc((ft_wordcount(s, c) + 1) * sizeof(char *));
-	i = 0;
+	i = -1;
 	st = -1;
 	j = 0;
 	if (s == NULL || array == NULL)
 		return (NULL);
-	while (i <= ft_strlen(s))
+	while (++i <= ft_strlen(s))
 	{
 		if (s[i] != c && st < 0)
 			st = i;
-		else if (( i == ft_strlen(s) || s[i] == c ) && st >= 0 )
+		else if ((i == ft_strlen(s) || s[i] == c) && st >= 0)
 		{
 			array[j++] = ft_strings(s, st, i);
+			if (array[j - 1] == 0)
+				return (ft_free(j, array), NULL);
 			st = -1;
 		}
-		i++;
 	}
 	array[j] = 0;
 	return (array);
