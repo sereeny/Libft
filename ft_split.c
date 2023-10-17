@@ -52,7 +52,7 @@ static char	*ft_strings(char const *s, int st, int fi)
 	int			i;
 
 	i = 0;
-	string = (char *)malloc((fi - st + 3) * sizeof(char));
+	string = (char *)malloc((fi - st + 1) * sizeof(char));
 	while (st < fi)
 	{
 		string[i] = s[st];
@@ -78,9 +78,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i <= ft_strlen(s))
 	{
-		if (s[i] != c && st == 0)
+		if (s[i] != c && st < 0)
 			st = i;
-		else if ( i == ft_strlen(s) || s[i] == c )
+		else if (( i == ft_strlen(s) || s[i] == c ) && st >= 0 )
 		{
 			array[j++] = ft_strings(s, st, i);
 			st = -1;
