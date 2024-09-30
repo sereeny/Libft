@@ -56,5 +56,5 @@ char	*ft_itoa(int n)
 		buffer[len--] = (nbr % 10) + 48;
 		nbr /= 10;
 	}
-	return ((char *)buffer);
+	return (buffer);
 }

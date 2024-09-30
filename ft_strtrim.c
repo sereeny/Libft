@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Elimina todos los caracteres de la string ’set’ desde el principio y desde el
-final de ’s1’, hasta encontrar un caracter no perteneciente a ’set’. La string
-resultante se devuelve con una reserva de malloc(3)*/
+/*strtrim removes all whitespace characters from the beginning and the end of a
+string. As whitespace is counted everything for which isspace(3) returns true.*/
 
 #include "libft.h"
 
@@ -25,9 +24,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1) - 1;
-	while (s1[i] != '\0' && ft_strchr(set, s1[i]) != NULL)
+	while (s1[i] && ft_strchr(set, s1[i]) != NULL)
 		i++;
-	while (j >= 0 && ft_strchr(set, s1[j]) != NULL)
+	while (j >= 0 && ft_strrchr(set, s1[j]) != NULL)
 		j--;
 	len = j - i + 1;
 	if (i > j)

@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The memcpy() function copies n bytes from memory area src to memory area dst. 
-If dst and src overlap, behavior is undefined. Applications in which dst and 
-src might overlap should use memmove(3) instead.*/
+/*The memmove() function copies n bytes from memory area src to memory area 
+dest. The memory areas may overlap: copying takes place as though the bytes 
+in src are first copied into a temporary array that does not overlap src or
+dest, and the bytes are then copied from the temporary array to dest.*/
 
 #include "libft.h"
 
@@ -23,7 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	if ((d == NULL) && (s == NULL))
+	if ((d == NULL) || (s == NULL))
 		return (NULL);
 	if (d > s)
 	{

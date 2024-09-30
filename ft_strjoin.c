@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*strjoin() crea una cadena formada por str1 en combinación con str2. La cadena
-devuelta se asigna fuera de la memoria temporal y, por lo tanto, sólo es válida
-durante la duración de la cláusula. Si no hay suficiente espacio temporal 
-disponible, strjoin no se ejecuta y se genera un error.*/
+/*strjoin() creates a string formed with s1 combined with s2.*/
 
 #include "libft.h"
 

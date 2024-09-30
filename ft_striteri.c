@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*A cada carácter de la string ’s’, aplica la función ’f’ dando como parámetros 
-el índice de cada carácter dentro de ’s’ y la dirección del propio carácter, 
-que podrá modificarse si es necesario.*/
+/* To each char in string 's', apply the function 'f' giving as parameters the
+index of each char in 's' and its address that could be modified if necessary.*/
 
 #include "libft.h"
 

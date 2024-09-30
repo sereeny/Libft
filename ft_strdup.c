@@ -19,13 +19,13 @@ available, NULL is returned and errno is set to ENOMEM.*/
 
 char	*ft_strdup(const char *s1)
 {
-	char	*pun;
-	char	*punpun;
+	char	*s1_cpy;
+	char	*ret;
 
-	pun = (char *)s1;
-	punpun = (char *)malloc(ft_strlen(s1) + 1);
-	if (pun == 0)
+	s1_cpy = (char *)s1;
+	ret = (char *)malloc(ft_strlen(s1) + 1);
+	if (s1_cpy == 0)
 		return (0);
-	ft_strlcpy(punpun, pun, ft_strlen(s1) + 1);
-	return (punpun);
+	ft_strlcpy(ret, s1_cpy, ft_strlen(s1) + 1);
+	return (ret);
 }

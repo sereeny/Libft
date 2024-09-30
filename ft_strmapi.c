@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*A cada carácter de la string ’s’, aplica la función ’f’ dando como parámetros
-el índice de cada carácter dentro de ’s’ y el propio carácter. Genera una nueva
-string con el resultado del uso sucesivo de ’f’*/
+/*Applies the function f to each character of the string s to create a new 
+string (with malloc(3)) resulting from successive applications of f.*/
 
 #include "libft.h"
 
