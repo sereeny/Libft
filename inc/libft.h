@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova42@student.42malaga.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:30:37 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/23 16:36:19 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:16:18 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,21 @@
 # include <string.h>
 # include <stdio.h>
 
+/**
+ * @brief Calculates the length of a null-terminated string.
+ *
+ * This function takes a pointer to a character string and returns
+ * the number of characters in the string, excluding the null terminator (`\0`).
+ *
+ * @param s A pointer to the null-terminated string whose length is to be calculated.
+ * @param n A pointer to the null-terminated string whose length is to be calculated.
+ * @return The length of the string (number of characters excluding the null terminator).
+ *
+ * @note If the input string is NULL, the behavior is undefined.
+ */
 void	ft_bzero(void *s, size_t n);
+
+
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
