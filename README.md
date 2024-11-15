@@ -9,8 +9,8 @@
   <h2>Installation</h2>
     <p>To start using Libft, follow these steps:</p>
             Clone the repository:
-            <pre><code>git clone git@github.com:sereeny/libft.git
-cd libft</code></pre>
+            <pre><code>git clone git@github.com:sereeny/Libft.git
+cd Libft</code></pre>
             Compile the library:
             <pre><code>make</code></pre>
                 This command will create an archive file named <code>libft.a</code> in the project directory, which contains all the compiled functions. 
